@@ -21,5 +21,38 @@ void runTests(){
   traverse(l);
   printf("\n");
 
+  //MY CODE
+  //Test length
+  int len = length(l2);
+  printf("The number of elements in the list: %d", len);
+  printf("\n\n");
+
+  //Test push
+  listElement* l3 = createEl("push element 1", 30);
+  push(&l3, "push element 2", 30);
+  printf("Item pushed into linked list: ");
+  traverse(l3);
+  printf("\n");
+
+  //Test pop
+  printf("Item popped from the linked list: ");
+  pop(&l3);
+  traverse(l3);
+  printf("\n");
+
+  //Test enqueue
+  listElement* l4 = createEl("enqueue element 1", 30);
+  enqueue(&l4, "enqueue element 2", 30);
+  printf("Item enqueued into linked list: ");
+  traverse(l4);
+  printf("\n");
+
+  //Test dequeue
+  printf("Item dequeued from the linked list: ");
+  dequeue(&l4);
+  traverse(l4);
+  printf("\n");
+
+
   printf("\nTests complete.\n");
 }
